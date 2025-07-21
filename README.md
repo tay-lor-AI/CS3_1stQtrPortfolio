@@ -25,4 +25,4 @@
    - git config --global user.email "your email used in github"
 4. Press **Ctrl-Shift-G** to open source control. Type **"First Commit"** on the Message text box.
 5. Click on **Commit**, then on **Synch Changes** if it appears and a prompt will display **to fork**, click on it to enable saving on your github.com account.  
-6. Repeat numbers 4 to 6 whenever you make changes on this portfolio and saving it **(change commit message each time)**.
+6. Repeat numbers 4 to 6 whenever you make changes on this portfolio and saving it **(change commit message each time)** and Emma was here!
