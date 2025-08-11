@@ -1,0 +1,21 @@
+<h1> Q1 3rd Graded Exercise submitted by Emma of Strontium </h1>
+<input id="meal" type="number" placeholder="Meal Price: "><br>
+<input id="tip" type="number" placeholder="Tip: "><br>
+<input id="service" type="number" placeholder="Service Charge (%): "><br>
+
+<button onclick="cakeulator()">Calculate Total</button>
+
+<div id="totalOutput"></div>
+
+<script>
+    function cakeulator(){
+        meal = Number(meal.value);
+        myTip = Number(tip.value);
+        service = Number(service.value);
+
+        total = (meal + myTip) + meal * service / 100;
+        totalOutput.innerHTML = "Total Amount: Php" + total.toPrecision(6);
+        alert("Total Amount: Php" + total.toFixed(2))
+        console.log("Total Amount: Php" + total.toExponential())
+    }
+</script>
