@@ -3,15 +3,15 @@
 
 <body>
 
-    <h2> Q1 3rd Graded Exercise submitted by Emma Tancinco of Strontium</h2>
+    <h2> Q1 2nd Graded Exercise submitted by Emma Tancinco of Strontium</h2>
 
-    <input id="meal" type="number" placeholder="Meal Price: "><br>
-    <input id="tip" type="number" placeholder="Tip: "><br>
-    <input id="service" type="number" placeholder="Service Charge (%): "><br>
+    Meal Price: <input id="meal" type="number"><br>
+    Tip: <input id="tip" type="number"><br>
+    Service Charge: <input id="service" type="number"><br>
 
-    <button onclick="totalMeal()">Accept Input</button>
+    <button onclick="totalMeal()">Accept Input</button> <br>
 
-    <div id="totalOutput"></div>
+    <p>Total Meal: <span id="totalOutput"></span></p>
 
     <script>
         function totalMeal() {
@@ -20,7 +20,7 @@
             service = Number(document.getElementById("service").value);
 
             totalCost = meal + myTip + (service / 100 * meal)
-            totalOutput.innerHTML = ("Total Amount: Php" + totalCost.toFixed(2))
+            totalOutput.innerHTML = (totalCost.toFixed(2))
         }
 
     </script>
