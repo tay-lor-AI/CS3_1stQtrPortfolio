@@ -1,0 +1,23 @@
+button {
+    background-color: #D6A99D;
+    transition-duration: 1s;
+    border: none;
+    color: #FBF3D5;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9CAFAA;
+    color: #D6DAC8;
+    font-size: 30px;
+}
+
+button:active {
+    background-color: #D6A99D;
+    color: #FBF3D5;
+    box-shadow: 0 5px #a27f76;
+    transform: translateY(4px);
+}
