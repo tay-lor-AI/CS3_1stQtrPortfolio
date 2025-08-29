@@ -6,7 +6,7 @@ rli = rl.createInterface({
 rli.on('line',greet);
 
 function greet(greeting){
-    switch (String(greet)){
+    switch (String(greeting)){
         case "HELLO":
             console.log('ENGLISH');
             break;
