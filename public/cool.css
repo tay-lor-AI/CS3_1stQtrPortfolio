@@ -1,0 +1,29 @@
+body {
+    font-family: "Helvetica";
+    color: white;
+    text-align: center;
+    background-image: url('https://images4.alphacoders.com/129/1297318.jpg');
+}
+
+h1 {
+    font-size: 88px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+button {
+    transition-duration: 0.1s;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    font-size: 20px;
+}
+
+button:active {
+    box-shadow: 0 5px #a27f76;
+    transform: translateY(4px);
+}

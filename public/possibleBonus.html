@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Emma's Word!</title>
+    <link rel="stylesheet" href="cool.css">
+</head>
+
+<body>
+<h1>guess my word!!!</h1>
+<p id="wordDisplay"></p> <p id="wordsDisplay"></p>
+<input type="text" id="guessInput" maxlength="1">
+<button onclick="makeGuess()">Guess</button>
+<p id="message"></p>
+
+<h2>Attempts</h2>
+<p id="count"></p>
+<script>
+    document.getElementById("count").textContent = 15;
+</script>
+
+<script>
+  let secretWord1 = ["e","x","i","s","t","i","n","g",];
+  let secretWord2 = ["e","m","m","a"];
+  let guessedWord1 = ["_", "_", "_", "_", "_", "_", "_"];
+  let guessedWord2 = [ "_", "_", "_", "_"];
+  let guesses = 15;
+
+  guessedWord1.unshift(" ")
+  let totalGuessed = guessedWord1.concat(guessedWord2)
+  document.getElementById("wordDisplay").textContent = guessedWord1.join(" ");
+  document.getElementById("wordsDisplay").textContent = guessedWord2.join(" ");
+
+  function makeGuess() {
+    if (guesses == 0){
+        document.getElementById("message").textContent = "NO MORE ATTEMPTS :(";
+    }
+    else{
+    guesses--;
+    let guess = document.getElementById("guessInput").value.toLowerCase();
+    let correct = false;
+
+    for (let i = 0; i < secretWord1.length; i++) {
+      if (secretWord1[i] === guess) {
+        guessedWord1[i] = guess;
+        correct = true;
+      }
+    }
+    
+    for (let i = 0; i < secretWord2.length; i++) {
+      if (secretWord2[i] === guess) {
+        guessedWord2[i] = guess;
+        correct = true;
+      }
+    }
+
+    document.getElementById("wordDisplay").textContent = guessedWord1.join(" ");
+    document.getElementById("wordsDisplay").textContent = guessedWord2.join(" ");
+    document.getElementById("message").textContent = correct ? "✅ Correct!" : "❌ Try again.";
+    document.getElementById("guessInput").value = "";
+    document.getElementById("count").textContent = guesses;}
+  }
+</script>
+<a href="../index.html"> HOMEEE </a>
+</body>
