@@ -1,0 +1,47 @@
+body {
+    font-family: "Sans-serif", "Verdana", monospace;
+    background-color:floralwhite
+}
+
+.header {
+    background-color: #DDDAD0;
+    color: #7A7A73;
+    line-height: 0.5;
+    border-radius: 12px;
+    padding: 1%;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.introduction {
+    background-image: url('https://i.pinimg.com/736x/1a/34/1a/1a341aa1c5ce03aac8bb9db2f9474ab7.jpg');
+    color: floralwhite;
+    border-radius: 40px;
+    padding: 20px; 
+    width: 40%;   
+}
+
+.links {
+    color: #333;
+    border-radius: 20px;
+    padding: 10px;
+    width: 60%;   
+}
+
+.container {
+    display: flex;    
+    gap: 20px;          
+    margin-top: 30px;
+}
+
+a:link {
+  color: #333;
+}
+
+a:visited {
+  color:#333;
+}
+
+a:hover {
+  color: #7A7A73;
+}
