@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        :root {
+            --speed: 18s;
+            --size: 70px;
+        }
+
+        body {
+            background: #050914;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .jellyfish {
+            position: absolute;
+            top: 50vh;
+            left: -30vw;
+            width: var(--size);
+            animation: swim var(--speed) linear infinite;
+        }
+
+        .bell {
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            opacity: .9;
+            animation: breathe 3s ease-in-out infinite;
+            margin: 0 auto;
+        }
+
+        .tentacles {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .tentacle {
+            width: 6px;
+            height: calc(var(--size)*0.8);
+            margin: 0 4px;
+            display: inline-block;
+            animation: sway 3s ease-in-out infinite;
+            border-radius: 50%;
+            opacity: 0.85;
+        }
+
+        @keyframes swim {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+
+            50% {
+                transform: translateX(60vw) translateY(-4vh);
+            }
+
+            100% {
+                transform: translateX(120vw) translateY(0);
+            }
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes sway {
+            0% {
+                transform: rotate(-2deg);
+            }
+
+            50% {
+                transform: rotate(2deg);
+            }
+
+            100% {
+                transform: rotate(-2deg);
+            }
+        }
+
+        .blue {
+            background: #00eaff;
+            filter: drop-shadow(0 0 4px #00eaff);
+        }
+
+        .blue-t {
+            background: #a6f6ff;
+        }
+
+        .pink {
+            background: #ff4de6;
+            filter: drop-shadow(0 0 4px #ff4de6);
+        }
+
+        .pink-t {
+            background: #ffc6f6;
+        }
+
+        .purple {
+            background: #a94dff;
+            filter: drop-shadow(0 0 4px #a94dff);
+        }
+
+        .purple-t {
+            background: #e1c6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jellyfish" style="--size:60px;top:40vh;animation-duration:16s;">
+        <div class="bell blue"></div>
+        <div class="tentacles">
+            <span class="tentacle blue-t"></span>
+            <span class="tentacle blue-t"></span>
+            <span class="tentacle blue-t"></span>
+        </div>
+    </div>
+    <div class="jellyfish" style="--size:65px;top:55vh;animation-duration:20s;">
+        <div class="bell pink"></div>
+        <div class="tentacles">
+            <span class="tentacle pink-t"></span>
+            <span class="tentacle pink-t"></span>
+            <span class="tentacle pink-t"></span>
+        </div>
+    </div>
+    <div class="jellyfish" style="--size:70px;top:65vh;animation-duration:22s;">
+        <div class="bell purple"></div>
+        <div class="tentacles">
+            <span class="tentacle purple-t"></span>
+            <span class="tentacle purple-t"></span>
+            <span class="tentacle purple-t"></span>
+        </div>
+    </div>
+</body>
+
+</html>
