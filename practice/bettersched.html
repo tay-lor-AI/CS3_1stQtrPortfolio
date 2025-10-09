@@ -31,12 +31,41 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+
+            .links {
+            background-color: #afafaf;
+            overflow: hidden;
+            float: none;
+            border-radius: 12px;
+            }
+
+            .links a {
+            float: left;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+            .links a:hover {
+            background-color: #acacac;
+            color: black;
+            }
+
+            .links a.active {
+            background-color: #51645d;
+            color: white;
+            }
         </style>
     </head>
 
     <body>
         <div class="links">
-            
+            <a class="active" href="#home">Monday</a>
+            <a href="#news">Tuesday</a>
+            <a href="#contact">Thursday</a>
+            <a href="#about">Friday</a>
         </div>
         <h1 style="text-align: center">Strontium Monday Schedule </h1>
     
