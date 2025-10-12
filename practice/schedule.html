@@ -2,51 +2,98 @@
 <html>
 
 <head>
-    <title>Monday Schedule</title>
     <style>
         th,
         td {
             border: 1px solid black;
             padding: 8px;
             text-align: center;
+            margin: 10px;
+        }
+
+        body {
+            background-color: #DDDAD0;
+            color: #5e5e5b;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        th {
+            background-color: #9c9c94;
+        }
+
+        img {
+            height: 315px;
+            float: right;
+        }
+
+        .centerr {
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links {
+            background-color: #afafaf;
+            overflow: hidden;
+            float: none;
+            border-radius: 12px;
+        }
+
+        .links a {
+            float: left;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .links a:hover {
+            background-color: #acacac;
+            color: black;
+        }
+
+        .links a.active {
+            background-color: #51645d;
+            color: white;
         }
     </style>
-    <!-- Giving a border to elements also inside the table-->
 </head>
 
 <body>
-    <!-- Header -->
-    <h1>Strontium Monday Schedule</h1>
-    <li><a href="./practice/schedule.html"> Tuesday Schedule </a> </li>
-    <li><a href="./practice/schedule.html"> Thursday Schedule </a> </li>
+    <div class="links">
+        <a class="active" href="#home">Monday</a>
+        <a href="https://katsuaisu.github.io/CS3_1stQtrPortfolio/public/salitan.html">Tuesday</a>
 
+    </div>
+    <h1 style="text-align: center">Strontium Monday Schedule </h1>
 
-    <table style="border: 1px solid black;  border-collapse: collapse;">
-        <!-- The style basically gives a border outside -->
+    <table style="border: 1px solid black;  border-collapse: collapse;" div class="table">
         <tr>
             <th>Time</th>
             <th>Class</th>
-            <th>How much i want to cry (1 is the least 5 is the most)</th>
         </tr>
-        <!-- headers for the table! tr for row, th for header -->
 
         <tr>
             <td>7:30-8:15</td>
             <td>English</td>
-            <td>1</td>
         </tr>
-        <!-- td is an element in a column -->
 
         <tr>
             <td>8:15-9:00</td>
             <td>Social Science</td>
-            <td>1</td>
         </tr>
 
         <tr>
             <td>9:10-9:55</td>
             <td rowspan="2">Physics</td>
-            <td rowspan="2">1</td>
         </tr>
 
         <tr>
@@ -55,25 +102,21 @@
 
         <tr>
             <td>10:40-11:25</td>
-            <td>Study Period</td>
-            <td>1</td>
+            <td>Stdy Period</td>
         </tr>
 
         <tr>
             <td>11:25-12:10</td>
             <td>Math</td>
-            <td>4</td>
         </tr>
 
         <tr>
             <td>12:10-1:05</td>
             <td>Lunch</td>
-            <td>1</td>
         </tr>
         <tr>
             <td>1:05-1:50</td>
             <td rowspan="2">Chemistry</td>
-            <td rowspan="2">4</td>
         </tr>
 
         <tr>
@@ -83,7 +126,6 @@
         <tr>
             <td>2:45-3:30</td>
             <td rowspan="2">Computer Science</td>
-            <td rowspan="2">1</td>
         </tr>
 
         <tr>
@@ -91,9 +133,15 @@
         </tr>
 
     </table>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/j7otgAJPiUg?si=ergnV2GP94sCyUSJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <img src ="https://i.imgflip.com/gqevi.jpg">
-    <p>vid is bcs i miss my friends since i havent seen them in years trust. pic was bcs basically its because i was with friends!!!!</p>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/j7otgAJPiUg?si=ergnV2GP94sCyUSJ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <img src="https://i.imgflip.com/gqevi.jpg">
+    <p div class="centerr">I chose this video because it properly conveys the feeling of hopelessness but also hope at
+        the same time. I try to get through it even when its really hard. I chose the image because it's what I feel
+        most of the time, especially after lunch</p>
 </body>
 
 </html>
