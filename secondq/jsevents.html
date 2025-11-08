@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page info -->
+    <title>Computer Science Bonus?</title>
+    <meta name="description" content="Strontium's monday schedule, based on the requirements given for Graded Activity 1">
+    <meta name="author" content="Emma Tancinco">
+    <link rel="icon" type="image/jpeg" href="https://pbs.twimg.com/media/GoFy-kuWYAAjJQQ.jpg">
+    <link rel="stylesheet" href="jsevents.css">
+
+    </head>
+
+    <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="LoginScreen.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="content">
+        <p id="score"></p>
+        <h1 id="typer"></h1>
+        <p id="result"></p>
+            <script>
+                let typeMe = document.getElementById("typer");
+                let score = document.getElementById("score");
+                let oopsies = document.getElementById("result");
+                let letters = "abcdefghijklmnopqrstuvwxyz";
+                overlay = document.getElementsByClassName("overlay")[0];
+                let scoreValue = 0;
+                
+                function getRandomLetter(){
+                    randomLetter = Math.floor(Math.random()* letters.length);
+                    return letters[randomLetter];
+                }
+                
+                actual = getRandomLetter();
+                typeMe.textContent = actual;
+
+                document.body.onkeypress = function getTheResult(){
+                    if (event.key.toLowerCase() === actual){
+                        scoreValue += 1;
+                        oopsies.textContent = "Correct 👍👍🌜";
+                        score.textContent = "Score: " + scoreValue;
+                        overlay.style.backgroundColor = "rgba(94, 255, 0, 0.4)";
+                    }
+                    else {
+                        scoreValue = 0;
+                        score.textContent = "Score: " + scoreValue;
+                        oopsies.textContent = "Oopsies! Wrong 🥺"
+                        overlay.style.backgroundColor = "rgba(153, 153, 255, 0.4)";
+
+                    }
+                    actual = getRandomLetter();
+                    typeMe.textContent = actual;
+                };
+            </script>
+    </div>
+    </body>
+</html>
