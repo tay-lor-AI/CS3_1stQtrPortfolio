@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page info -->
+    <title>Computer Science Bonus?</title>
+    <meta name="description" content="Strontium's monday schedule, based on the requirements given for Graded Activity 1">
+    <meta name="author" content="Emma Tancinco">
+    <link rel="icon" type="image/jpeg" href="https://pbs.twimg.com/media/GoFy-kuWYAAjJQQ.jpg">
+    <!--<link rel="stylesheet" href="jsevents.css">-->
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #firstTask{
+            text-align: center;
+            background-color: white;
+            padding: 5px 10px;
+            margin-left: 40%;
+            margin-right: 40%;
+            border-radius: 10px;
+        }
+
+        #box{
+            margin: 0 auto;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+    </style>
+    </head>
+
+<body>
+  <h1 id="firstTask">Click Me!</h1>
+  <script>
+    document.body.onclick = changeColor
+
+    function changeColor() {
+        r = Math.floor(Math.random() * 256);
+        g = Math.floor(Math.random() * 256);
+        b = Math.floor(Math.random() * 256);
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+  </script>
+<a href="jsevents.html">actual game</a>
+  <div id="box" style="width:100px; height:100px; background:red;"></div>
+        <script>
+        const box = document.getElementById("box");
+        box.onmouseover = changeColorScale;
+
+        function changeColorScale() {
+            box.style.backgroundColor = "royalblue";
+            box.style.transform = "scale(1.2)";
+        }
+
+        box.onmouseout = resetBox;
+        
+        function resetBox() {
+            box.style.backgroundColor = "red";
+            box.style.transform = "scale(1)";
+        } 
+
+        </script>
+</body>
